@@ -1,0 +1,5 @@
+# dependencies
+/node_modules
+../node_modules/
+./my-app/node_modules
+my-app/node_modules/@babel/core/lib/index.js
