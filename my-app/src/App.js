@@ -1,59 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Button from './components/button.js';
 import Input from './components/inputField.js';
+import { connect } from 'react-redux';
 
 class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      input: '',
-      inputHandler: this.handleChange.bind(this),
-      submitBtn: {
-        value: 'Submit',
-        clickHandler: this.submitBtnClick.bind(this)
-      },
-      cancelBtn: {
-        value: 'Cancel',
-        clickHandler: this.cancelBtnClick.bind(this)
-      }
-    };
-  }
-
-  submitBtnClick() {
-    this.setState({
-      submitBtn: {
-        value: 'Submitted'
-      }
-    })
-  }
-
-  cancelBtnClick() {
-    this.setState({
-      cancelBtn: {
-        value: 'Canceled'
-      }
-    })
-  }
-
-  handleChange(event) {
-    this.setState({
-      input: event.target.value
-    })
   }
 
   render() {
     return (
       <div>
-        <Input {...this.state}/>
-        <Button {...this.state.submitBtn} />
-        <Button {...this.state.cancelBtn} />
-        <div>{this.state.input}</div>
+        <Input value={ this.props.input }/>
+        <Button value={ this.props.value1 } />
+        <Button value={ this.props.value2 } />
+        <div>{ this.props.input }</div>
         </div>
     );
   }
 }
 
-export default App;
+
+const mapStateToProps = (state) => {
+  return {
+    input: state.reducerApp.input,
+    value1 : state.reducerApp.submitBtnValue,
+    value2 : state.reducerApp.cancelBtnValue
+  }
+}
+
+const mapDispatchToProps = () => {{ }}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
