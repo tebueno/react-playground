@@ -11,7 +11,7 @@ const Input = (props) => {
     );
 };
 
-const mapStateToProps = () => {{ }}
+const mapStateToProps = () => { }
 
 const mapDispatchToProps = (dispatch) => {
     return {

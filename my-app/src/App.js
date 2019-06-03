@@ -6,10 +6,6 @@ import { connect } from 'react-redux';
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>
@@ -31,6 +27,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = () => {{ }}
+const mapDispatchToProps = () => { }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

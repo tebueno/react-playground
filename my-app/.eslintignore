@@ -1,0 +1,7 @@
+!.storybook
+!.stories
+node_modules/**
+dist/**
+_build/**
+**/node_modules/**
+**/dist/**

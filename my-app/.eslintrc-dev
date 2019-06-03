@@ -1,0 +1,35 @@
+// todo: you can point your IDE to this so whilst dev-ing you can lint your code
+// todo: w/o it whacking your debuggers and console.log messages
+{
+  "extends": [
+    "./.eslintrc.js"
+  ],
+  // todo: stuff that testing injects into global namespace for convenience & DRY
+  "globals": {
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "test": true,
+    "shallow": true,
+    "mount": true,
+    "render": true,
+    "React": true,
+    "ReactDOM": true,
+    "TestUtils": true
+  },
+  // todo: make it easier to do dev and testing
+  "rules": {
+    // one class per file, even if it's stateless func
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "no-debugger": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/label-has-for": "off",
+    "jest/no-disabled-tests": "warn",
+    "object-curly-newline": "off",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  }
+}

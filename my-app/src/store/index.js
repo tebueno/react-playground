@@ -1,13 +1,11 @@
-import {createStore, applyMiddleware} from 'redux';
-import * as allReducers from '../reducers/index';
-import {combineReducers} from 'redux'
-// import thunk from 'redux-thunk';
+import { createStore, combineReducers } from 'redux'
+import * as allReducers from '../reducers/index'
 
-var rootReducer = combineReducers(allReducers);
+const rootReducer = combineReducers(allReducers)
 
 export default function configureStore() {
-    return createStore(
-        rootReducer
-        // applyMiddleware(thunk)
-    );
+  return createStore(
+    rootReducer,
+    // applyMiddleware(thunk)
+  )
 }

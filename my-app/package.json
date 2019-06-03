@@ -13,7 +13,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/.bin/eslint ./src/",
+    "lint:fix": "eslint ./src/ --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -23,5 +25,21 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "eslint-config-airbnb": "17.0.0",
+    "eslint-config-react-app": "2.1.0",
+    "eslint-import-resolver-webpack": "0.10.0",
+    "eslint-loader": "2.0.0",
+    "eslint-plugin-babel": "5.1.0",
+    "eslint-plugin-flowtype": "2.49.3",
+    "eslint-plugin-html": "4.0.5",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-plugin-jest": "21.17.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-no-for-of-loops": "1.0.0",
+    "eslint-plugin-no-loops": "0.3.0",
+    "eslint-plugin-prefer-object-spread": "1.2.1",
+    "eslint-plugin-react": "7.9.1"
+  }
 }
